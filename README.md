@@ -8,7 +8,7 @@ Do more with DAOs...like play games. With the power of a simple descisions made 
 ## Useful Links
 - [Fractal Framework](https://app.dev.fractalframework.xyz/)
 
-## Season Address
+## Game Address
 Located at the top of the site [Fractal Connect Four](https://fractal-connect-four.netlify.app/). This will be used to interact with the current game along with the game id.
 
 ## Play as a DAO
@@ -31,13 +31,13 @@ Function Signature = uint8 gameId, uint8 column
 ```
 
 ## Playing Solo
-Want to challange as an ethereum account. Currently the only way to play is using `Etherscan`'s write contract feature. Search for the current season address on the correct network's etherscan. In the `Contract` tab, click on `Write Contract`. After connecting your web3 wallet you can use the methods here to interact directly with the contracts.
+Want to challange as an ethereum account? Currently the only way to play is using `Etherscan`'s write contract feature. Search for the current game address on the correct network's etherscan. In the `Contract` tab, click on `Write Contract`. After connecting your web3 wallet you can use the methods here to interact directly with the contracts.
 
 ## Gameplay
 ### FAQs
 - Who goes first?
 - - Turns occur as each player makes a move starting with Team two. 
 - Why can't I call column 6?
-- - Currently the contract are written with the count starting with 0 (like a developer). So from left to write its 0, 1, 2, 3, 4, 5
+- - The contract is written with the count starting with 0 (like a developer). So from left to right, it's 0, 1, 2, 3, 4, 5, 6
 
 
