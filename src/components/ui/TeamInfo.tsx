@@ -64,7 +64,7 @@ export function TeamInfo({ teamNum }: { teamNum: number }) {
                 ? rotateAnimation
                 : 'none'
             }
-            boxSize={{ min0: 8, min400: 12, min600: 16, min1000: 16, min1920: 40 }}
+            boxSize={{ min0: '2.75rem', min400: 16, min600: 16, min1000: 20, min1920: 40 }}
           />
         </Flex>
         {winningTeamNum === teamNum && (

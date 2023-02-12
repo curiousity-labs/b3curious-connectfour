@@ -43,13 +43,14 @@ export function Board() {
   return (
     <Flex alignItems='flex-start' h='full' justifyContent='center' pt={{ min0: 8, min1920: 36 }}>
       <Box
-        boxShadow='1px 1px 3px #fabd2e11, 4px 4px 6px #fabd2e11, 8px 8px 10px #fabd2e11, 16px 16px 18px #fabd2e11'
         h='fit-content'
-        rounded='md'
+        rounded='lg'
+        border='8px solid'
+        borderColor="gold.500"
       >
         {currentBoard.map((row, rowIndex) => {
           return (
-            <Flex key={rowIndex} borderX='1px solid' borderColor='gold.500'>
+            <Flex key={rowIndex}>
               {row.map((square) => {
                 return (
                   <SquareFrame key={square.location} square={square}>

@@ -5,8 +5,6 @@ import { Box } from '@chakra-ui/react'
 export function SquareFrame({ square, children }: { square: ConnectSquare; children?: ReactNode }) {
   return (
     <Box
-      border='1px solid'
-      borderColor='black.500'
       id={square.location}
       key={square.location}
       position='relative'
@@ -20,10 +18,10 @@ export function SquareFrame({ square, children }: { square: ConnectSquare; child
           },
           '&:before': {
             border: {
-              min0: '9px solid',
-              min400: '12px solid',
-              min600: '16px solid',
-              min1920: '20px solid',
+              min0: '6px solid',
+              min400: '8px solid',
+              min600: '12px solid',
+              min1920: '16px solid',
             },
             borderColor: square.connected
               ? {
@@ -46,13 +44,13 @@ export function SquareFrame({ square, children }: { square: ConnectSquare; child
           },
           '&:after': {
             boxShadow: {
-              min0: '0px 0px 0px 8px #fabd2eff',
-              min400: '0px 0px 0px 14px #fabd2eff',
-              min600: '0px 0px 0px 17px #fabd2eff',
-              min1920: '0px 0px 0px 19px #fabd2eff',
+              min0: '0px 0px 0px 8px #fabd2eff, 0px 0px 1px 2px inset #000000',
+              min400: '0px 0px 0px 12px #fabd2eff, 0px 0px 1px 2px inset #000000',
+              min600: '0px 0px 0px 12px #fabd2eff, 0px 0px 1px 4px inset #000000',
+              min1920: '0px 0px 0px 16px #fabd2eff, 0px 0px 1px 6px inset #000000',
             },
             borderRadius: '100%',
-            boxSize: { min0: '65%', min1920: '68%' },
+            boxSize: '83%',
             content: '""',
             left: '50%',
             position: 'absolute',

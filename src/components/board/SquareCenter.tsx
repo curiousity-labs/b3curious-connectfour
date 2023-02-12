@@ -33,8 +33,8 @@ export function SquareCenter({ square, rowIndex }: { square: ConnectSquare; rowI
   return (
     <Flex
       justifyContent='center'
-      pl={{ min0: 2, min400: 4 }}
-      pt={{ min0: 2, min400: 4 }}
+      pl={{ min0: 1, min400: 2, min1920: 3 }}
+      pt={{ min0: 1, min400: 2, min1920: 3 }}
       ref={animatedChipRef}
       animation={shouldRunAnimation ? animationDownTraveling : undefined}
       transform='translateY(0)'
@@ -44,7 +44,7 @@ export function SquareCenter({ square, rowIndex }: { square: ConnectSquare; rowI
       {!!CoinIcon && (
         <CoinIcon
           id={square.location}
-          boxSize={{ min0: '2.25rem', min400: 12, min600: '16', min1920: '24' }}
+          boxSize={{ min0: '2.75rem', min400: 16, min600: 20, min1920: '6.5rem' }}
           zIndex={0}
           animation={square.connected ? rotateAnimation : undefined}
         />
