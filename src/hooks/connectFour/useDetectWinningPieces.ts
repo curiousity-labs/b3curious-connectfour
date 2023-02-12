@@ -20,7 +20,7 @@ export function useDetectWinningPieces() {
     const connectedPieces = [lastPieceLocation]
 
     // to the right
-    for (let i = lastColumn + 1; i < 6; i++) {
+    for (let i = lastColumn + 1; i < 7; i++) {
       const square = board[lastRow][i]
       if (square.team === winningTeamNum) {
         connectedPieces.push(square.location)
@@ -99,7 +99,7 @@ export function useDetectWinningPieces() {
     if (lastRow !== 0) {
       let rowIndex = lastRow - 1
       let columnIndex = lastColumn + 1
-      while (rowIndex >= 0 && columnIndex < 6) {
+      while (rowIndex >= 0 && columnIndex < 7) {
         const square = board[rowIndex][columnIndex]
         if (square.team === winningTeamNum) {
           connectedPieces.push(square.location)
