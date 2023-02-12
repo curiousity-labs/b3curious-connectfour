@@ -45,12 +45,24 @@ export function Board() {
       <Box
         h='fit-content'
         rounded='lg'
-        border='8px solid'
-        borderColor="gold.500"
       >
         {currentBoard.map((row, rowIndex) => {
           return (
-            <Flex key={rowIndex}>
+            <Flex key={rowIndex} sx={rowIndex == 0 ? {
+              '& div:first-of-type': {
+                roundedTopLeft: '12px',
+              },
+              '& div:last-of-type': {
+                roundedTopRight: '12px',
+              }
+            } : rowIndex === 5 ? {
+              '& div:last-of-type': {
+                roundedBottomRight: '12px',
+              },
+              '& div:first-of-type': {
+                roundedBottomLeft: '12px',
+              }
+            } : undefined}>
               {row.map((square) => {
                 return (
                   <SquareFrame key={square.location} square={square}>
