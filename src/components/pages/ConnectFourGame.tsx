@@ -1,5 +1,4 @@
 import { Grid, GridItem } from '@chakra-ui/react'
-import { Branding } from '../ui/Branding'
 import { TeamInfo } from '../ui/TeamInfo'
 import { Board } from '../board/Board'
 
@@ -24,7 +23,6 @@ export function ConnectFourGame() {
       templateRows={{ min1000: '5rem 10rem 1fr', min1920: 'calc(100vh)' }}
     >
       <GridItem area='brand' bg='black.900-semi-transparent'>
-        <Branding />
       </GridItem>
       <GridItem area='tOne'>
         <TeamInfo teamNum={1} />

@@ -16,7 +16,6 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react'
-import { Check, CloseX, Copy, Info } from '@decent-org/fractal-ui'
 import { constants } from 'ethers'
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
@@ -25,8 +24,8 @@ import { useCopyText } from '../../hooks/utils/useCopyText'
 import { useConnectFourGame } from '../../hooks/connectFour/useConnectFourGame'
 import { useStore } from '../../provider/store/StoreProvider'
 import { GameBase } from '../../provider/store/types'
-import { Branding } from '../ui/Branding'
 import { SeasonAction } from '../../provider/store/season/actions'
+import { CheckIcon, CloseIcon, CopyIcon, QuestionIcon } from '@chakra-ui/icons'
 
 const smallScreen = `
   "brand"
@@ -59,12 +58,11 @@ export function ConnectFourGames() {
       templateRows={{ 'min0': '5rem 1fr', 'min1920': 'calc(100vh)' }}
     >
       <GridItem area='brand' bg='black.900-semi-transparent'>
-        <Branding />
       </GridItem>
       <GridItem area='table'>
         <TableContainer m={8}>
           <Alert status='info' w='w-full' my={4}>
-            <Info boxSize='24px' />
+            <QuestionIcon boxSize='24px' />
             <AlertTitle>
               <Text textStyle='text-lg-mono-medium' my={4}>
                 For Instructions on how to start a game and play see
@@ -105,7 +103,7 @@ export function ConnectFourGames() {
               rounded='lg'
               textStyle='text-base-mono-bold'
             >
-              <Copy /> {connectFourContract?.address}
+              <CopyIcon /> {connectFourContract?.address}
             </Text>
           </Flex>
 
@@ -167,7 +165,7 @@ export function TableBodyRow({ gameId }: { gameId: number }) {
               gap={4}
             >
               <Text>{game.teamOne.displayName}</Text>
-              {!isGameOver ? null : isTeamOneWinner ? <Check /> : <CloseX />}
+              {!isGameOver ? null : isTeamOneWinner ? <CheckIcon /> : <CloseIcon />}
             </Flex>
           </Link>
         </SkeletonText>
@@ -182,7 +180,7 @@ export function TableBodyRow({ gameId }: { gameId: number }) {
               gap={4}
             >
               <Text>{game.teamTwo.displayName}</Text>
-              {!isGameOver ? null : isTeamTwoWinner ? <Check /> : <CloseX />}
+              {!isGameOver ? null : isTeamTwoWinner ? <CheckIcon /> : <CloseIcon />}
             </Flex>
           </Link>
         </SkeletonText>

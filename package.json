@@ -17,7 +17,6 @@
     "@chakra-ui/icons": "^2.0.16",
     "@chakra-ui/react": "^2.4.8",
     "@chakra-ui/system": "^2.3.8",
-    "@decent-org/fractal-ui": "^0.1.7",
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fractal-framework/fractal-contracts": "^0.1.14",
