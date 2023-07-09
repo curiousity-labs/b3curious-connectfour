@@ -17,7 +17,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.48.1
   '@typescript-eslint/parser': ^5.48.1
   '@vitejs/plugin-react': ^3.0.0
-  b3-curious-contracts: ^0.1.10
+  b3-curious-contracts: ^0.1.11
   crypto-js: ^4.1.1
   eslint: ^8.31.0
   eslint-config-prettier: ^8.6.0
@@ -49,7 +49,7 @@ dependencies:
   '@emotion/styled': 11.10.5_jp5djshq6aqfasno3mth3hguci
   '@fractal-framework/fractal-contracts': 0.1.14
   '@tanstack/query-core': 4.22.0
-  b3-curious-contracts: 0.1.10
+  b3-curious-contracts: 0.1.11
   crypto-js: 4.1.1
   ethers: 5.7.2
   framer-motion: 8.4.3_biqbaboplfbrettd7655fr4n2y
@@ -3492,8 +3492,8 @@ packages:
       - debug
     dev: false
 
-  /b3-curious-contracts/0.1.10:
-    resolution: {integrity: sha512-XxsJNB6Mf3uRaQMk4/BAMkJZgfpksXxhutaVrq1lt+9ul9oFklwGDETpbvGmP3WaAgwcqKXp4bAQTuBmxq8m5A==}
+  /b3-curious-contracts/0.1.11:
+    resolution: {integrity: sha512-z3WnpCKkUX7/4fxOHm8kWHQXFpltND8i6QkApjo2aIyHHbQJ1IJ7T3o/zqOMcKRlK2e3oEWYzJjLpLOnvowhuQ==}
     dependencies:
       '@openzeppelin/contracts-upgradeable': 4.8.1
     dev: false

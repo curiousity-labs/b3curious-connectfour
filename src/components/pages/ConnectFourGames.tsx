@@ -190,9 +190,10 @@ export function TableBodyRow({ gameId }: { gameId: number }) {
       <Td isNumeric>{game.turn}</Td>
       <Td>
         <Flex justifyContent='flex-end'>
-          <Button variant='secondary' onClick={() => navigate(ROUTES.game.relative(game.gameId))}>
+          {/* @todo needs season id */}
+          {/* <Button variant='secondary' onClick={() => navigate(ROUTES.game.relative(game.gameId))}>
             View Game
-          </Button>
+          </Button> */}
         </Flex>
       </Td>
     </Tr>

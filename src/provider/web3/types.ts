@@ -1,8 +1,9 @@
 import { FractalRegistry, GnosisSafe } from '@fractal-framework/fractal-contracts';
-import { ConnectFour } from 'b3-curious-contracts/typechain';
+import { ConnectFourS, ConnectFourSFactory } from 'b3-curious-contracts/typechain';
 
 export type ContractAddresses = {
   connectFourAddress: string,
+  connectFourFactoryAddress: string,
   fractalRegistryAddress: string;
   gnosisSafeAddress: string,
 }
@@ -15,7 +16,8 @@ export type NetworkConfig = {
 }
 
 export type BaseContracts = {
-  connectFourBase: ConnectFour,
+  connectFourBase: ConnectFourS,
+  connectFourFactoryBase: ConnectFourSFactory,
   fractalRegistryBase: FractalRegistry;
   gnosisSafeBase: GnosisSafe;
 }

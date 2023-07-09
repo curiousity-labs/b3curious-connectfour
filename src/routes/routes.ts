@@ -3,8 +3,12 @@ export const ROUTES = {
     path: '/',
     relative: () => '/'
   },
+  season: {
+    path: ':seasonId',
+    relative: (seasonId: number) => `/season/${seasonId.toString()}`
+  },
   game: {
     path: ':gameId',
-    relative: (gameId: number) => `/${gameId.toString()}`
+    relative: (seasonId: number, gameId: number) => `/season/${seasonId.toString()}/${gameId.toString()}`
   }
 }

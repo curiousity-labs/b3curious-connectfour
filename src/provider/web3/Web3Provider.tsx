@@ -3,7 +3,7 @@ import { WagmiConfig, configureChains, createClient, createStorage, goerli, useP
 import { goerliConfig } from './networks'
 
 import { FractalRegistry__factory as fractalRegistryInterface, GnosisSafe__factory as gnosisSafeInterface } from '@fractal-framework/fractal-contracts'
-import { ConnectFour__factory as connectFourInterface } from 'b3-curious-contracts/typechain'
+import {  ConnectFourS__factory as connectFourInterface, ConnectFourSFactory__factory as connectFourFactoryInterface } from 'b3-curious-contracts/typechain'
 import { alchemyProvider } from 'wagmi/providers/alchemy'
 import { infuraProvider } from 'wagmi/providers/infura'
 import { publicProvider } from 'wagmi/providers/public'
@@ -45,10 +45,12 @@ export function Web3Provider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const connectFourBase = connectFourInterface.connect(config.contractAddresses.connectFourAddress, provider)
+    const connectFourFactoryBase = connectFourFactoryInterface.connect(config.contractAddresses.connectFourAddress, provider)
     const fractalRegistryBase = fractalRegistryInterface.connect(config.contractAddresses.fractalRegistryAddress, provider)
     const gnosisSafeBase = gnosisSafeInterface.connect(config.contractAddresses.gnosisSafeAddress, provider)
     setBaseContracts({
       connectFourBase,
+      connectFourFactoryBase,
       fractalRegistryBase,
       gnosisSafeBase,
     })
